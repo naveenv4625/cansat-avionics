@@ -4,7 +4,7 @@ A soda-can-sized flight computer that logs altitude and motion data, detects its
  
 **Status:** In progress: bench testing (Fall 2026)
  
-![Component overview](docs/images/2026-09-25_components-overview_annotated.jpg)
+![Component overview](docs/images/2026-09-28_components-overview_annotated.jpg)
  
 ---
  
