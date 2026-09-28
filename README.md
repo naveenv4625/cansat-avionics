@@ -87,4 +87,3 @@ Progress photos and notes: [docs/build-log.md](docs/build-log.md)
 - [ ] Ground tests (elevator / drop test / data replay)
 - [ ] Payload sled CAD + OpenRocket simulation
 - [ ] Rocket flight
-This is Phase 1 of a three-part project: CanSat → cold-gas thruster test stand → thrust-vector-controlled rocket.
