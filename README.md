@@ -72,9 +72,10 @@ data/              Logged test and flight data
 |---|---|---|---|
 | | | | |
 ---
+-->
 ## Build log
 Progress photos and notes: [docs/build-log.md](docs/build-log.md)
--->
+
  
 ---
  
