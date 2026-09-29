@@ -16,6 +16,7 @@ Design, build, and recover a telemetry payload that logs atmospheric and inertia
 - [ ] Transmit live altitude, temperature, and battery voltage to a ground station at ≥ 1 Hz
 - [ ] Detect flight states (pad → ascent → descent → landed) from live sensor data
 - [ ] Log all flight data to an onboard microSD card as a backup to the radio link
+
 **Secondary objectives**
 - [ ] Auto-calibrate ground-level altitude on startup
 - [ ] Record 6-axis IMU data during flight
