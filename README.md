@@ -43,8 +43,8 @@ The ground station is a second ESP32-S3 Feather + LoRa FeatherWing connected to 
 ### Why these parts
 <!-- One or two sentences each, in your own words, from the datasheets. -->
 - **ESP32-S3:** Built-in wifi/bluetooth good for bench testing before adding the radio. Dual-core, allowing one core to handle sensor reading while the other handles radio transmission. Hardware floating-point unit (FPU) for fast and accurate sensor calculations. Also includes built-in LiPo battery connection and battery monitoring, along with native USB.
-- **BMP388:** Simple pressure/temp sensor 
-- **LSM6DSOX:** 6-axis accelerometer/gyroscope capable of reading acceleration up to +-16 G, which prevents the launch data from peaking. 
+- **BMP388:** Tracks precise temperature and pressure with a relative accuracy of 8 pascals, equating to &plusmn;0.5 meters of altitude, allowing for accurate flight data. Also measures temperature with &plusmn;0.5&#8451; accuracy.
+- **LSM6DSOX:** 6-axis accelerometer/gyroscope capable of reading acceleration up to &plusmn;16 G, which prevents the launch data from peaking, necessary for keeping the acceleration data smooth throughout the mission. 
 - **LoRa (915 MHz):** (placeholder)
 <!-- HIDDEN UNTIL READY: remove this line and the closing arrow line below to show
 ### Pin map (planned)
