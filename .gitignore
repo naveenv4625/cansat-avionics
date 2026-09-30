@@ -1,0 +1,10 @@
+# OS junk
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Secrets (Wi-Fi passwords, etc.) - never commit these
+secrets.h
+
+# Logs
+*.log
