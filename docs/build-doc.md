@@ -10,6 +10,7 @@ Newest entries at the top.
 
 - Created a PlatformIO firmware project in VS Code (Adafruit Feather ESP32-S3 No PSRAM, Arduino framework)
 - **Problem:** Upload failed with "Could not open COM3, port busy."
+
   **Fix:** Entered the bootloader manually (hold BOOT, tap RESET) for the
   first upload.
 - Successful blink test on ESP32-S3 with serial output
