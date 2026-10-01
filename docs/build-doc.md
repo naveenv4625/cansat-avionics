@@ -2,6 +2,20 @@
 
 Newest entries at the top.
 
+## 2026-10-01: First read from BMP388 chip ID with raw I2C
+
+![Serial output showing chip ID 0x50](images/2026-10-01_bmp388_first_reading.jpg)
+
+- Connected the BMP388 to the Feather over STEMMA QT (I2C).
+- Researched the Arduino `Wire` (I2C) library and the BMP388 datasheet's
+  register map before using any sensor-specific library, to understand
+  what it does before using it.
+- Wrote a raw I2C read of the CHIP_ID register (`0x00`) at the sensor's address (`0x77`).
+- **Result:** read `0x50`, which matches the datasheet for the BMP388 sensor.
+
+**Next:** Add the Adafruit BMP3XX library, then read temperature, pressure,
+and altitude, and check that the values make sense.
+
 ---
 
 ## 2026-09-29: Toolchain setup + first upload
