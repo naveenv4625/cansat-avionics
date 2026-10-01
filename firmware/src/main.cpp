@@ -1,15 +1,17 @@
 #include <Arduino.h>
+#include <Wire.h>
 
 void setup() {
+  Wire.begin();
   Serial.begin(115200);
-  pinMode(LED_BUILTIN, OUTPUT);
+  delay(3000);
+  Wire.beginTransmission(0x77);
+  Wire.write(0x00);
+  Wire.endTransmission(false);
+  Wire.requestFrom(0x77, 1);
+  Serial.print("Chip id: 0x");
+  Serial.println(Wire.read(), HEX);
 }
 
 void loop() {
-  digitalWrite(LED_BUILTIN, HIGH);
-  Serial.println("LED ON");
-  delay(500);
-  digitalWrite(LED_BUILTIN, LOW);
-  Serial.println("LED OFF");
-  delay(500);
 }
