@@ -4,6 +4,21 @@ Newest entries at the top.
 
 ---
 
+## 2026-09-29: Toolchain setup + first upload
+
+![Blink test](images/2026-09-29_blink-test.gif)
+
+- Created a PlatformIO firmware project in VS Code (Adafruit Feather ESP32-S3 No PSRAM, Arduino framework)
+- **Problem:** Upload failed with "Could not open COM3, port busy."
+
+  **Fix:** Entered the bootloader manually (hold BOOT, tap RESET) for the
+  first upload.
+- Successful blink test on ESP32-S3 with serial output
+
+**Next:** Connect and code I2C sensors for bench testing
+
+---
+
 ## 2026-09-28: Parts arrived
 
 ![Components laid out](images/2026-09-28_components-overview.jpg)
