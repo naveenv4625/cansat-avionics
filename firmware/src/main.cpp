@@ -36,12 +36,16 @@ void setup() {
   }
   sox.setAccelRange(LSM6DS_ACCEL_RANGE_16_G);
   sox.setGyroRange(LSM6DS_GYRO_RANGE_2000_DPS);
-  sox.setAccelDataRate(LSM6DS_RATE_6_66K_HZ);
-  sox.setGyroDataRate(LSM6DS_RATE_6_66K_HZ); 
+  sox.setAccelDataRate(LSM6DS_RATE_104_HZ);
+  sox.setGyroDataRate(LSM6DS_RATE_104_HZ); 
+
+  // header line 
+  Serial.println("time_ms,bmp_temp_C,pressure_hPa,alt_m,imu_temp_C,ax_ms2,ay_ms2,az_ms2,gx_rads,gy_rads,gz_rads");
 }
 
 void loop() {
   Serial.print(millis());
+  Serial.print(",");
   
   // BMP readings
   if(!bmp.performReading()) {
@@ -82,5 +86,5 @@ void loop() {
   Serial.print(","); Serial.print(gyro.gyro.z);
 
   Serial.println();
-  delayMicroseconds(10000);
+  delay(10);
 }
