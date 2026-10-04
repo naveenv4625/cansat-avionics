@@ -1,0 +1,223 @@
+Temperature = 27.87 *C
+Pressure = 977.77 hPa
+Approx. Altitude = 15.06 m
+
+Temperature = 27.90 *C
+Pressure = 977.77 hPa
+Approx. Altitude = 15.10 m
+
+Temperature = 27.92 *C
+Pressure = 977.76 hPa
+Approx. Altitude = 15.13 m
+
+Temperature = 27.95 *C
+Pressure = 977.76 hPa
+Approx. Altitude = 15.21 m
+
+Temperature = 27.98 *C
+Pressure = 977.75 hPa
+Approx. Altitude = 15.23 m
+
+Temperature = 28.02 *C
+Pressure = 977.79 hPa
+Approx. Altitude = 14.94 m
+
+Temperature = 28.06 *C
+Pressure = 977.92 hPa
+Approx. Altitude = 13.83 m
+
+Temperature = 28.11 *C
+Pressure = 978.11 hPa
+Approx. Altitude = 12.19 m
+
+Temperature = 28.14 *C
+Pressure = 978.36 hPa
+Approx. Altitude = 10.05 m
+
+Temperature = 28.18 *C
+Pressure = 978.63 hPa
+Approx. Altitude = 7.74 m
+
+Temperature = 28.22 *C
+Pressure = 978.93 hPa
+Approx. Altitude = 5.15 m
+
+Temperature = 28.27 *C
+Pressure = 979.28 hPa
+Approx. Altitude = 2.18 m
+
+Temperature = 28.31 *C
+Pressure = 979.62 hPa
+Approx. Altitude = -0.78 m
+
+Temperature = 28.36 *C
+Pressure = 979.99 hPa
+Approx. Altitude = -3.91 m
+
+Temperature = 28.41 *C
+Pressure = 980.35 hPa
+Approx. Altitude = -6.99 m
+
+Temperature = 28.46 *C
+Pressure = 980.71 hPa
+Approx. Altitude = -10.13 m
+
+Temperature = 28.51 *C
+Pressure = 981.05 hPa
+Approx. Altitude = -13.00 m
+
+Temperature = 28.56 *C
+Pressure = 981.34 hPa
+Approx. Altitude = -15.47 m
+
+Temperature = 28.60 *C
+Pressure = 981.55 hPa
+Approx. Altitude = -17.26 m
+
+Temperature = 28.62 *C
+Pressure = 981.71 hPa
+Approx. Altitude = -18.66 m
+
+Temperature = 28.61 *C
+Pressure = 981.83 hPa
+Approx. Altitude = -19.66 m
+
+Temperature = 28.60 *C
+Pressure = 981.92 hPa
+Approx. Altitude = -20.43 m
+
+Temperature = 28.54 *C
+Pressure = 982.00 hPa
+Approx. Altitude = -21.13 m
+
+Temperature = 28.49 *C
+Pressure = 982.06 hPa
+Approx. Altitude = -21.58 m
+
+Temperature = 28.43 *C
+Pressure = 982.11 hPa
+Approx. Altitude = -22.02 m
+
+Temperature = 28.38 *C
+Pressure = 982.14 hPa
+Approx. Altitude = -22.32 m
+
+Temperature = 28.35 *C
+Pressure = 982.17 hPa
+Approx. Altitude = -22.60 m
+
+Temperature = 28.32 *C
+Pressure = 982.20 hPa
+Approx. Altitude = -22.81 m
+
+Temperature = 28.30 *C
+Pressure = 982.22 hPa
+Approx. Altitude = -22.99 m
+
+Temperature = 28.29 *C
+Pressure = 982.23 hPa
+Approx. Altitude = -23.11 m
+
+Temperature = 28.29 *C
+Pressure = 982.25 hPa
+Approx. Altitude = -23.21 m
+
+Temperature = 28.30 *C
+Pressure = 982.25 hPa
+Approx. Altitude = -23.21 m
+
+Temperature = 28.31 *C
+Pressure = 982.25 hPa
+Approx. Altitude = -23.26 m
+
+Temperature = 28.32 *C
+Pressure = 982.24 hPa
+Approx. Altitude = -23.19 m
+
+Temperature = 28.33 *C
+Pressure = 982.24 hPa
+Approx. Altitude = -23.17 m
+
+Temperature = 28.35 *C
+Pressure = 982.24 hPa
+Approx. Altitude = -23.13 m
+
+Temperature = 28.37 *C
+Pressure = 982.23 hPa
+Approx. Altitude = -23.04 m
+
+Temperature = 28.38 *C
+Pressure = 982.23 hPa
+Approx. Altitude = -23.05 m
+
+Temperature = 28.40 *C
+Pressure = 982.22 hPa
+Approx. Altitude = -23.02 m
+
+Temperature = 28.41 *C
+Pressure = 982.23 hPa
+Approx. Altitude = -23.06 m
+
+Temperature = 28.42 *C
+Pressure = 982.22 hPa
+Approx. Altitude = -22.96 m
+
+Temperature = 28.43 *C
+Pressure = 982.21 hPa
+Approx. Altitude = -22.91 m
+
+Temperature = 28.45 *C
+Pressure = 982.21 hPa
+Approx. Altitude = -22.90 m
+
+Temperature = 28.47 *C
+Pressure = 982.21 hPa
+Approx. Altitude = -22.90 m
+
+Temperature = 28.49 *C
+Pressure = 982.21 hPa
+Approx. Altitude = -22.89 m
+
+Temperature = 28.51 *C
+Pressure = 982.20 hPa
+Approx. Altitude = -22.82 m
+
+Temperature = 28.53 *C
+Pressure = 982.18 hPa
+Approx. Altitude = -22.65 m
+
+Temperature = 28.54 *C
+Pressure = 982.18 hPa
+Approx. Altitude = -22.60 m
+
+Temperature = 28.55 *C
+Pressure = 982.17 hPa
+Approx. Altitude = -22.52 m
+
+Temperature = 28.57 *C
+Pressure = 982.17 hPa
+Approx. Altitude = -22.60 m
+
+Temperature = 28.58 *C
+Pressure = 982.18 hPa
+Approx. Altitude = -22.68 m
+
+Temperature = 28.59 *C
+Pressure = 982.18 hPa
+Approx. Altitude = -22.64 m
+
+Temperature = 28.60 *C
+Pressure = 982.20 hPa
+Approx. Altitude = -22.77 m
+
+Temperature = 28.60 *C
+Pressure = 982.19 hPa
+Approx. Altitude = -22.75 m
+
+Temperature = 28.61 *C
+Pressure = 982.20 hPa
+Approx. Altitude = -22.81 m
+
+Temperature = 28.62 *C
+Pressure = 982.21 hPa
+Approx. Altitude = -22.87 m
