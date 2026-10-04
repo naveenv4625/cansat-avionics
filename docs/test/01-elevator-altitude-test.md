@@ -38,8 +38,7 @@ Run 2 was accidentally logged with P0 = 1013.25 hPa instead of 1011.85 hPa. The 
 
 ## Results
 
-<!-- Add the altitude vs. time plot here once made:
-![Altitude during elevator test](../images/2026-10-02_elevator-altitude-plot.png) -->
+![Altitude during elevator test](../images/2026-10-02_elevator-altitude-plot.png)
 
 | | Run 1 (down) | Run 2 (up, corrected) |
 |---|---|---|
