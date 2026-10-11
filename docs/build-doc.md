@@ -2,6 +2,68 @@
 
 Newest entries at the top.
 
+## 2026-10-10: Accelerometer 6-position calibration (run 1)
+ 
+- Fixed the remaining bugs in the calibration tool (`src/accel_cal.cpp`) and ran the
+  6-position calibration: each axis pointed straight up, then straight down, averaging
+  500 readings of all three axes per position.
+- **Results (run 1, hand-held fixture):**
+  | Axis | Up (m/s²) | Down (m/s²) | Offset (m/s²) | Scale |
+  |---|---|---|---|---|
+  | X | 9.85 | −9.88 | −0.0126 | 1.0061 |
+  | Y | 9.79 | −9.93 | −0.0677 | 1.0057 |
+  | Z | 9.97 | −9.69 | +0.1393 | 1.0026 |
+  Offsets ≤ 0.14 m/s², scale errors 0.3–0.6%. Worst uncorrected reading was
+  0.16 m/s² off (Z up).
+- Cross-check: X's sideways readings agreed with its up/down offset; Z's disagreed by
+  ~0.17 m/s², consistent with ~0.5–1° of tilt when the board was stood on edge.
+- The board was held between two boxes by hand, so I'm redoing the calibration with the
+  board fixed to a block and hands off during measurement. Run 1 is kept for comparison
+  (repeatability check).
+- Raw log: `data/2026-10-10_accel-calibration-run1-handheld.txt`
+**Next:** Calibration run 2 with a proper fixture, then a verification run with the
+correction applied, then the Test 02 report.
+ 
+---
+ 
+## 2026-10-05: Multi-environment PlatformIO setup + calibration tool
+ 
+- Restructured `platformio.ini` into a shared `[env]` plus two environments:
+  `main` (flight code) and `accel_cal` (calibration tool), using `build_src_filter`
+  so each builds a different file from `src/`.
+- Enabled PlatformIO's `log2file` monitor filter so every Serial Monitor session is
+  saved to a log file automatically (estimated ~2 KB/s, ~7 MB per hour of logging).
+- Wrote the first version of the accelerometer 6-position calibration tool.
+**Next:** Debug the calibration tool and run the calibration.
+ 
+---
+ 
+## 2026-10-04: Startup calibration for barometer and gyro
+ 
+- Added a startup **gyro bias calibration**: average 500 readings while still, then
+  subtract the offsets from every reading. The gyro now reads ≈ 0 rad/s at rest.
+- Added a startup **barometer ground calibration**: average the pressure at power-up and
+  use it as the altitude reference, so altitude reads ≈ 0 m at the starting point.
+  Altitude is computed from the same reading's pressure instead of `readAltitude()`
+  (which takes a second, separate reading).
+- **Problem:** Both calibrations "averaged" a single reading.
+  **Cause:** The sensor read was outside the averaging loop, so the same value was
+  added hundreds of times.
+  **Fix:** Moved the read inside the loop.
+- **Problem:** Altitude read ~3 m off right after calibration.
+  **Cause:** The first readings after configuring the BMP388 hadn't settled yet and
+  pulled the ground-pressure average off.
+  **Fix:** Discard the first 50 readings before averaging. Altitude now starts at
+  ≈ 0 m, with ~±0.5 m wander at rest (normal noise and drift).
+- Calibration results print as `#` comment lines before the CSV header so every log
+  records them.
+- Decided: gyro bias is recalibrated every startup (it changes each power-on and with
+  temperature); accelerometer offset/scale will be calibrated once with the 6-position
+  method and hard-coded (gravity must still read 9.81 m/s²).
+**Next:** Accelerometer 6-position calibration.
+ 
+---
+
 ## 2026-10-03: Test 01 analysis, plotting script, LSM6DSOX bring-up
 
 ![Test 01 altitude plot](images/2026-10-02_elevator-altitude-plot.png)
