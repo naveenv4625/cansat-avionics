@@ -21,7 +21,7 @@ Newest entries at the top.
 - The board was held between two boxes by hand, so I'm redoing the calibration with the
   board fixed to a block and hands off during measurement. Run 1 is kept for comparison
   (repeatability check).
-- Raw log: `data/2026-10-10_accel-calibration-run1-handheld.txt`
+- Raw log: `data/2026-10-10_accel-calibration-run1-handclamped.txt`
 **Next:** Calibration run 2 with a proper fixture, then a verification run with the
 correction applied, then the Test 02 report.
  
