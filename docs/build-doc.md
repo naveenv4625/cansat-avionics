@@ -7,7 +7,7 @@ Newest entries at the top.
 - Fixed the remaining bugs in the calibration tool (`src/accel_cal.cpp`) and ran the
   6-position calibration: each axis pointed straight up, then straight down, averaging
   500 readings of all three axes per position.
-- **Results (run 1, hand-held fixture):**
+- **Results (run 1, hand-clamped fixture):**
   | Axis | Up (m/s²) | Down (m/s²) | Offset (m/s²) | Scale |
   |---|---|---|---|---|
   | X | 9.85 | −9.88 | −0.0126 | 1.0061 |
