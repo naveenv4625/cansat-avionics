@@ -13,6 +13,7 @@ Newest entries at the top.
   | X | 9.85 | −9.88 | −0.0126 | 1.0061 |
   | Y | 9.79 | −9.93 | −0.0677 | 1.0057 |
   | Z | 9.97 | −9.69 | +0.1393 | 1.0026 |
+  
   Offsets ≤ 0.14 m/s², scale errors 0.3–0.6%. Worst uncorrected reading was
   0.16 m/s² off (Z up).
 - Cross-check: X's sideways readings agreed with its up/down offset; Z's disagreed by
