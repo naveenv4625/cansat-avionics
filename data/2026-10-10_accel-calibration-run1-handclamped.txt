@@ -1,0 +1,30 @@
+Place the sensor facing up (+Z up) on a flat surface press enter when ready
+Measuring... Do not move
+Board facing up values:
+0.02,-0.09,9.97
+Place the sensor facing down (-Z up) on a flat surface press enter when ready
+Measuring... Do not move
+Board facing down values:
+-0.02,0.22,-9.69
+Z offset: 0.1393
+Z scale: 1.0026
+Place the X-axis facing up (+X up) on a flat surface press enter when ready
+Measuring... Do not move
+X facing up values:
+9.85,-0.11,0.05
+Place the X axis facing down (-X up) on a flat surface press enter when ready
+Measuring... Do not move
+X facing down values:
+-9.88,0.10,-0.09
+X offset: -0.0126
+X scale: 1.0061
+Place the Y axis facing up (+Y up) on a flat surface press enter when ready
+Measuring... Do not move
+Y facing up values:
+-0.03,9.79,-0.00
+Place the Y axis facing down (-Y up) on a flat surface press enter when ready
+Measuring... Do not move
+Y facing down values:
+0.05,-9.93,-0.07
+Y offset: -0.0677
+Y scale: 1.0057
