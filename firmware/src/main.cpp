@@ -9,7 +9,10 @@ Adafruit_LSM6DSOX sox;
 
 float calibrated_hPa = 0;
 
-const float accelX = 0, accelY = 0, accelZ = 0;
+// 6-position calibration, 2026-10-10 (see docs/tests/02-accelerometer-calibration.md)
+const float ACCEL_OFFSET_X = -0.0126, ACCEL_SCALE_X = 1.0061;
+const float ACCEL_OFFSET_Y = -0.0677, ACCEL_SCALE_Y = 1.0057;
+const float ACCEL_OFFSET_Z =  0.1393, ACCEL_SCALE_Z = 1.0026;
 float gyroX = 0, gyroY = 0, gyroZ = 0;
 
 void calibrateBMP388() {
@@ -25,7 +28,7 @@ void calibrateBMP388() {
   
   for(size_t i = 0; i < samples; ++i) {
     if(!bmp.performReading()) {
-      Serial.println("Failed to read BMP388 data");
+      Serial.println("# Failed to read BMP388 data");
       while (1) {
         delay(10);
       }
@@ -52,7 +55,7 @@ void calibrateLSM6DSOX() {
     sensors_event_t gyro;
     sensors_event_t temp;
     if(!sox.getEvent(&accel, &gyro, &temp)) {
-      Serial.println("Failed to read LSM6DSOX data");
+      Serial.println("# Failed to read LSM6DSOX data");
       while (1) {
         delay(10);
       }
@@ -75,7 +78,7 @@ void calibrateLSM6DSOX() {
 
 void setup() {
   Serial.begin(115200);
-  delay(4000);
+  while(!Serial);
 
   // BMP388 setup (pressure/temp sensor)
   if(!bmp.begin_I2C()) {
@@ -113,7 +116,7 @@ void loop() {
   
   // BMP readings
   if(!bmp.performReading()) {
-    Serial.println("Failed to read BMP388 data");
+    Serial.println("# Failed to read BMP388 data");
     delay(500);
     return;
   }
@@ -134,17 +137,22 @@ void loop() {
   sensors_event_t gyro;
   sensors_event_t temp;
   if(!sox.getEvent(&accel, &gyro, &temp)) {
-    Serial.println("Failed to read LSM6DSOX data");
+    Serial.println("# Failed to read LSM6DSOX data");
     delay(500);
     return;
   }
 
+  // Apply accelerometer calibration: remove offset, then undo scale error
+  float ax = (accel.acceleration.x - ACCEL_OFFSET_X) / ACCEL_SCALE_X;
+  float ay = (accel.acceleration.y - ACCEL_OFFSET_Y) / ACCEL_SCALE_Y;
+  float az = (accel.acceleration.z - ACCEL_OFFSET_Z) / ACCEL_SCALE_Z;
+
   Serial.print(temp.temperature);
   Serial.print(",");
 
-  Serial.print(accel.acceleration.x);
-  Serial.print(","); Serial.print(accel.acceleration.y);
-  Serial.print(","); Serial.print(accel.acceleration.z);
+  Serial.print(ax);
+  Serial.print(","); Serial.print(ay);
+  Serial.print(","); Serial.print(az);
   Serial.print(",");
 
   Serial.print(gyro.gyro.x-gyroX);
