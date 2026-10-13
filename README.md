@@ -69,29 +69,29 @@ data/              Logged test and flight data
 ---
 -->
 ## Test results
- 
+
 | # | Date | Test | Key result | Report |
 |---|---|---|---|---|
 | 01 | 2026-10-02 | Barometric altitude: elevator test (BMP388) | Measured ~38 m rise over 13 floors; down and up runs agree within 0.7 m. Found ~18 s filter settling lag at a 2 s sampling interval | [Test 01](docs/tests/01-elevator-altitude-test.md) |
-| 02 | 2026-10-10 | Accelerometer 6-position calibration (LSM6DSOX) | Run 1: offsets ≤ 0.14 m/s², scale errors 0.3–0.6%. Fixture re-run and verification in progress | In progress ([run 1 data](data/2026-10-10_accel-calibration-run1-hand-clamped.txt)) |
- 
+| 02 | 2026-10-10 / 10-13 | Accelerometer 6-position calibration (LSM6DSOX) | Per-axis offset/scale correction cut worst-case error from 0.152 to 0.009 m/s² (~17×); all 6 orientations within 0.01 m/s² of 1 g; constants repeatable across 3 sessions | [Test 02](docs/tests/02-accelerometer-calibration.md) |
+
 ![Test 01: barometric altitude during elevator ride](docs/images/2026-10-02_elevator-altitude-plot.png)
- 
+
 ### Sensor characterization summary
- 
+
 | Sensor | Parameter | Result | Source |
 |---|---|---|---|
 | BMP388 | Relative altitude over a known height change | ~38 m over 13 floors (~2.9 m/floor); runs agree within 0.7 m | Test 01 |
 | BMP388 | Pressure drift at rest | ~0.3 m equivalent over 10 min | Test 01 |
 | BMP388 | Filter settling (IIR coeff 3, 2 s sampling) | ~18 s to within 0.1 m; ~25% of remaining gap closed per reading | Test 01 |
 | LSM6DSOX | Gyro bias | Measured and removed at every startup (500-sample average) | Firmware |
-| LSM6DSOX | Accelerometer offset / scale (run 1) | ≤ 0.14 m/s² / 0.3–0.6% | Test 02 (in progress) |
- 
+| LSM6DSOX | Accelerometer offset / scale (uncorrected) | Offsets up to 0.13 m/s² (Z); scale errors +0.2 to +0.6% | Test 02 |
+| LSM6DSOX | Accelerometer error after calibration | ≤ 0.009 m/s² on-axis, ≤ 0.010 m/s² magnitude, in all 6 orientations | Test 02 |
+| LSM6DSOX | Calibration repeatability (3 sessions, 2 days) | Offsets within 0.025 m/s², scales within 0.1% | Test 02 |
+
 ### Planned tests
-- **Test 02 (completion):** accelerometer calibration re-run with a fixed fixture, plus verification of corrected readings
 - **Static noise test:** barometric altitude and IMU noise at rest (standard deviation)
 - **Test 03:** elevator test repeated with barometer + accelerometer, complete unedited logs, timestamps and startup calibration
----
 
 ## Build log
 Progress photos and notes: [docs/build-log.md](docs/build-log.md)
