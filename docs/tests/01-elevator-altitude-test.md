@@ -1,6 +1,7 @@
 # Test 01: Barometric Altitude, Elevator Test
 
 **Date:** 2026-10-02
+
 **Hardware:** Adafruit ESP32-S3 Feather + BMP388 (STEMMA QT, I2C 0x77), powered over USB from a laptop
 
 **Data:**
