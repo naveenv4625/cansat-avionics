@@ -2,6 +2,30 @@
 
 Newest entries at the top.
 
+## 2026-10-13: Accelerometer calibration verified (Test 02 complete)
+ 
+- Averaged the run 1 and run 2 calibration constants and moved them into a shared
+  header (`include/accel_calibration.h`), so the flight code and the calibration tool
+  use the same numbers.
+- Added an `accel_verify` PlatformIO environment: it builds the calibration tool with a
+  `-DVERIFY_MODE` flag, which corrects every sample before averaging and prints the
+  magnitude √(x² + y² + z²) for each position.
+- **Problem:** The verification code added every reading to the sums twice (once
+  corrected, once raw), which would have made each average ~19.6 m/s².
+  **Cause:** The new corrected-sum line was added next to the old raw-sum lines instead
+  of replacing them, in all six copied blocks.
+  **Fix:** Deleted the old lines. Caught in code review before the run.
+- **Verification result:** all six orientations passed. Corrected on-axis readings were
+  within **0.009 m/s²** of ±9.81 and magnitudes within **0.010 m/s²** of 9.81 (limit:
+  0.05). Leftover offsets ≤ 0.004 m/s², leftover scales within 0.08% of 1.
+- **Before vs. after:** worst-case error went from **0.152 → 0.009 m/s² (~17×)**, mean
+  error from 0.092 → 0.005 m/s².
+- Constants measured in three sessions over two days agree within 0.025 m/s² (offsets)
+  and 0.1% (scales).
+- Data: `data/2026-10-13_accel-verification.txt`
+- Full report: [Test 02](tests/02-accelerometer-calibration.md)
+**Next:** Static noise test, then the MAX17048 battery monitor.
+
 ## 2026-10-10: Accelerometer 6-position calibration (run 1)
  
 - Fixed the remaining bugs in the calibration tool (`src/accel_cal.cpp`) and ran the
